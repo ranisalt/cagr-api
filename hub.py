@@ -36,7 +36,7 @@ async def get_items(campus: str=None, subject: str=None, name: str=None)-> dict:
     if campus is not None:
         filtered = (s for s in filtered if s['campus'] == campus)
     if subject is not None:
-        filtered = (s for s in filtered if s['_id'] == subject)
+        filtered = (s for s in filtered if s['id'] == subject)
     if name is not None:
         filtered = (s for s in filtered if name in s['name'])
     return filtered
